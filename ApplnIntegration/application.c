@@ -57,7 +57,17 @@ main(int argc, char **argv){
     add_data_to_dll(person_db, person2);
     add_data_to_dll(person_db, person3);
 
+    printf("Before deletion: \n");
     print_person_db(person_db);
-    
+    remove_data_from_dll_by_data_ptr(person_db, person2);
+    printf("After deletion: \n");
+    print_person_db(person_db);
+    add_data_to_dll(person_db, person1);
+    printf("Before deletion: \n");
+    print_person_db(person_db);
+    remove_data_from_dll_by_data_ptr(person_db, person1);
+    printf("After deletion: \n");
+    print_person_db(person_db);
+
     return 0;
 }
