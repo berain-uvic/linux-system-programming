@@ -46,11 +46,11 @@ remove_data_from_dll_by_data_ptr (dll_t *dll, void *data){
 /*return 0 if empty, -1 if not empty*/
 int
 is_dll_empty (dll_t *dll){
-    if(dll->head != NULL) {
-        return -1;
+    if(dll->head == NULL) {
+        return 0;
     }
     
-    return 0;
+    return -1;
 }
 
 /* delete all nodes from a dll, but do not free appln data*/
